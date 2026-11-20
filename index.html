@@ -1,0 +1,80 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Football Goals Planner</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="container">
+
+        <header>
+            <div class="logo">FOOTBALL GOALS</div>
+            <p>Your daily football planner</p>
+
+            <h1>Train hard.<br>Play harder.</h1>
+
+            <div class="stats">
+                <div>
+                    <h2 id="totalTasks">0</h2>
+                    <p>Total Tasks</p>
+                </div>
+
+                <div>
+                    <h2 id="completedTasks">0</h2>
+                    <p>Completed</p>
+                </div>
+            </div>
+        </header>
+
+        <main>
+            <div class="section-heading">
+                <div>
+                    <h2>My Football Goals</h2>
+                    <p>Organize your daily activities</p>
+                </div>
+
+                <button id="openForm">+ Add Task</button>
+            </div>
+
+            <form id="taskForm">
+                <input
+                    type="text"
+                    id="taskName"
+                    placeholder="Enter football activity..."
+                    required
+                >
+
+                <select id="taskCategory">
+                    <option value="Training">Training</option>
+                    <option value="Match">Match</option>
+                    <option value="Fitness">Fitness</option>
+                    <option value="Recovery">Recovery</option>
+                    <option value="Personal">Personal</option>
+                </select>
+
+                <input type="time" id="taskTime" required>
+
+                <button type="submit">Save Activity</button>
+            </form>
+
+            <div class="filter">
+                <button class="filter-btn active" data-filter="All">All</button>
+                <button class="filter-btn" data-filter="Training">Training</button>
+                <button class="filter-btn" data-filter="Match">Matches</button>
+                <button class="filter-btn" data-filter="Fitness">Fitness</button>
+            </div>
+
+            <div id="taskList" class="task-list"></div>
+
+            <p class="footer">DISCIPLINE BUILDS CHAMPIONS </p>
+        </main>
+
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
